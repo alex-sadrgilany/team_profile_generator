@@ -256,7 +256,7 @@ const finishHTML = () => {
     .then(writeFileResponse => {
         console.log('\x1b[32m', writeFileResponse.message),
         '\n';
-        console.log('\x1b[36m', "You can find your new Team Profile index.html in the 'dist' folder!");
+        console.log('\x1b[32m', "You can find your new Team Profile index.html in the 'dist' folder!");
     })
     .catch(err => {
         console.log(err);

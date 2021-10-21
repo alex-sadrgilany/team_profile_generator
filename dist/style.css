@@ -1,7 +1,42 @@
+body {
+    font-family: 'Kanit', sans-serif;
+}
+
+a {
+    text-decoration: underline;
+}
+
+li {
+    font-size: 18px;
+}
+
+.jumbotron {
+    background-color: #0F1A20;
+    color: #56E39F;
+}
+
+.card {
+    margin: 15px;
+    box-shadow: -4px -4px 8px rgba(0, 0, 0, 0.7);
+}
+
 .card-header {
-    background-color: red;
+    background-color: #56E39F;
+}
+
+.card-header h2 {
+    font-size: 35px;
+}
+
+.card-header h3 {
+    font-size: 23px;
 }
 
 .card-body {
-    background-color: blue;
+    background-color: #41463D;
+}
+
+.card-subtitle {
+    color: #F42C04;
+    font-size: 20px;
 }

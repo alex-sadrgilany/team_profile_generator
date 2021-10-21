@@ -7,9 +7,9 @@ const generateManager = dataManager => {
                     </div>
                     <div class="card-body">
                         <ul class="list-group">
-                            <li class="list-group-item">Employee ID: ${dataManager.getId()}</li>
-                            <li class="list-group-item">Email: <a href="mailto:${dataManager.getEmail()}">${dataManager.getEmail()}</a></li>
-                            <li class="list-group-item">Office Number: ${dataManager.officeNumber}</li>
+                            <li class="list-group-item"><span class="card-subtitle">Employee ID:</span> ${dataManager.getId()}</li>
+                            <li class="list-group-item"><span class="card-subtitle">Email:</span> <a href="mailto:${dataManager.getEmail()}">${dataManager.getEmail()}</a></li>
+                            <li class="list-group-item"><span class="card-subtitle">Office Number:</span> ${dataManager.officeNumber}</li>
                         </ul>
                     </div>
                 </div>`;
@@ -24,9 +24,9 @@ const generateEngineer = dataEngineer => {
                     </div>
                     <div class="card-body">
                         <ul class="list-group">
-                            <li class="list-group-item">Employee ID: ${dataEngineer.getId()}</li>
-                            <li class="list-group-item">Email: <a href="mailto:${dataEngineer.getEmail()}">${dataEngineer.getEmail()}</a></li>
-                            <li class="list-group-item">GitHub: <a href="https://github.com/${dataEngineer.getGithub()}" target="_blank">${dataEngineer.getGithub()}</a></li>
+                            <li class="list-group-item"><span class="card-subtitle">Employee ID:</span> ${dataEngineer.getId()}</li>
+                            <li class="list-group-item"><span class="card-subtitle">Email:</span> <a href="mailto:${dataEngineer.getEmail()}">${dataEngineer.getEmail()}</a></li>
+                            <li class="list-group-item"><span class="card-subtitle">GitHub:</span> <a href="https://github.com/${dataEngineer.getGithub()}" target="_blank">${dataEngineer.getGithub()}</a></li>
                         </ul>
                     </div>
                 </div>`;
@@ -41,9 +41,9 @@ const generateIntern = dataIntern => {
                     </div>
                     <div class="card-body">
                         <ul class="list-group">
-                            <li class="list-group-item">Employee ID: ${dataIntern.getId()}</li>
-                            <li class="list-group-item">Email: <a href="mailto:${dataIntern.getEmail()}">${dataIntern.getEmail()}</a></li>
-                            <li class="list-group-item">School: ${dataIntern.getSchool()}</li>
+                            <li class="list-group-item"><span class="card-subtitle">Employee ID:</span> ${dataIntern.getId()}</li>
+                            <li class="list-group-item"><span class="card-subtitle">Email:</span> <a href="mailto:${dataIntern.getEmail()}">${dataIntern.getEmail()}</a></li>
+                            <li class="list-group-item"><span class="card-subtitle">School:</span> ${dataIntern.getSchool()}</li>
                         </ul>
                     </div>
                 </div>`;
@@ -78,6 +78,9 @@ const generateWebPage = team => {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="./style.css"/>
     <title>My Team</title>
@@ -88,7 +91,7 @@ const generateWebPage = team => {
     </header>
     <main>
         <div class="container">
-            <div class="row">${generateCards(team)}
+            <div class="row justify-content-center">${generateCards(team)}
             </div>
         </div>
     </main>

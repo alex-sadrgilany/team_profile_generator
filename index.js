@@ -187,7 +187,7 @@ const questionsIntern = [
 
 const questionsNewMember = [
     {
-        type: "rawlist",
+        type: "list",
         name: "newMember",
         message: "Please select a new member to add to your team.",
         choices: [
@@ -245,19 +245,18 @@ const addMember = () => {
                 promptUserIntern();
                 break;
             case "I'm finished building my Team Profile":
-                init();
+                finishHTML();
                 break;
         }
     })
-}
+};
 
-const init = () => {
-    generateIndexHTML(teamArray)
-    .then(html => {
-        return writeFile(html);
-    })
+const finishHTML = () => {
+    writeFile(generateIndexHTML(teamArray))
     .then(writeFileResponse => {
-        console.log(writeFileResponse.message);
+        console.log('\x1b[32m', writeFileResponse.message),
+        '\n';
+        console.log('\x1b[36m', "You can find your new Team Profile index.html in the 'dist' folder!");
     })
     .catch(err => {
         console.log(err);

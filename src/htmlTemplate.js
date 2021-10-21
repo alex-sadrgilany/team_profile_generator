@@ -3,7 +3,7 @@ const generateManager = dataManager => {
                 <div class="card">
                     <div class="card-header">
                         <h2 class="card-title">${dataManager.getName()}</h2>
-                        <h3 class="card-title">${dataManager.getRole()}</h3>
+                        <h3 class="card-title"><i class="fas fa-briefcase"></i> ${dataManager.getRole()}</h3>
                     </div>
                     <div class="card-body">
                         <ul class="list-group">
@@ -20,7 +20,7 @@ const generateEngineer = dataEngineer => {
                 <div class="card">
                     <div class="card-header">
                         <h2 class="card-title">${dataEngineer.getName()}</h2>
-                        <h3 class="card-title">${dataEngineer.getRole()}</h3>
+                        <h3 class="card-title"><i class="fas fa-tools"></i> ${dataEngineer.getRole()}</h3>
                     </div>
                     <div class="card-body">
                         <ul class="list-group">
@@ -37,7 +37,7 @@ const generateIntern = dataIntern => {
                 <div class="card">
                     <div class="card-header">
                         <h2 class="card-title">${dataIntern.getName()}</h2>
-                        <h3 class="card-title">${dataIntern.getRole()}</h3>
+                        <h3 class="card-title"><i class="fas fa-user-graduate"></i> ${dataIntern.getRole()}</h3>
                     </div>
                     <div class="card-body">
                         <ul class="list-group">
@@ -81,6 +81,7 @@ const generateWebPage = team => {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="./style.css"/>
     <title>My Team</title>

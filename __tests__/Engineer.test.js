@@ -6,6 +6,7 @@ test("creates an Engineer object", () => {
     expect(engineer.name).toEqual(expect.any(String));
     expect(engineer.id).toEqual(expect.any(Number));
     expect(engineer.email).toEqual(expect.any(String));
+    expect(engineer.email).toContain("@");
     expect(engineer.github).toEqual(expect.any(String));
 });
 
@@ -25,6 +26,7 @@ test("gets engineer's email from function", () => {
     const engineer = new Engineer("Harry", 2, "harry@mail.com", "harrygithub");
 
     expect(engineer.getEmail()).toBe("harry@mail.com");
+    expect(engineer.getEmail()).toContain("@");
 });
 
 test("gets engineer's github from function", () => {

@@ -8,6 +8,15 @@ This project utilizes object oriented programming in order to dynamically genera
 
 Below is a walkthrough video that will show anybody who wants to use this application how to go about doing so. It will also detail some of the features involved in this project, including validation for prompts.
 
+## Table of Contents
+
+* [Screenshots](#screenshots)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Tests](#tests)
+* [Questions](#questions)
+
 ## Screenshots
 
 Generated Team Profile Webpage
@@ -21,14 +30,6 @@ Application
 Validation
 
 ![Validation](./assets/images/validation_screenshot.PNG)
-
-## Table of Contents
-
-* [Installation](#installation)
-* [Usage](#usage)
-* [License](#license)
-* [Test](#tests)
-* [Questions](#questions)
 
 ## Installation
 

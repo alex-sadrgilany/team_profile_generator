@@ -178,7 +178,7 @@ const questionsIntern = [
                 return true;
             }
             else {
-                console.log('\x1b[31m', " You must a number for the manager's office number!");
+                console.log('\x1b[31m', " You must enter a school for the Intern!");
                 return false;
             }
         }

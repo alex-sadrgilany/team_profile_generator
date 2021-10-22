@@ -18,8 +18,7 @@ const questionsManager = [
                 return true;
             }
             else {
-                console.log('\x1b[31m', " You must enter a name!");
-                return false;
+                return console.log('\x1b[31m', " You must enter a name!");
             }
         }
     },
@@ -32,8 +31,7 @@ const questionsManager = [
                 return true;
             }
             else {
-                console.log('\x1b[31m', " You must enter a number for the manager's ID");
-                return false;
+                return console.log('\x1b[31m', " You must enter a number for the manager's ID");
             }
         }
     },
@@ -46,8 +44,7 @@ const questionsManager = [
                 return true;
             }
             else {
-                console.log('\x1b[31m', " You must enter a valid email address!");
-                return false;
+                return console.log('\x1b[31m', " You must enter a valid email address!");
             }
         }
     },
@@ -60,8 +57,7 @@ const questionsManager = [
                 return true;
             }
             else {
-                console.log('\x1b[31m', " You must a number for the manager's office number!");
-                return false;
+                return console.log('\x1b[31m', " You must a number for the manager's office number!");
             }
         }
     }
@@ -77,8 +73,7 @@ const questionsEngineer = [
                 return true;
             }
             else {
-                console.log('\x1b[31m', " You must enter a name!");
-                return false;
+                return console.log('\x1b[31m', " You must enter a name!");
             }
         }
     },
@@ -87,12 +82,16 @@ const questionsEngineer = [
         name: "idEngineer",
         message: "What is the Engineer's employee ID?",
         validate: idInput => {
-            if (!isNaN(idInput)) {
+            let idChecker = teamArray.some(obj => obj.id === idInput);
+
+            if (!isNaN(idInput) && !idChecker) {
                 return true;
             }
+            else if (idChecker) {
+                return console.log('\x1b[31m', " You must enter a unique id for every employee!");
+            }
             else {
-                console.log('\x1b[31m', " You must enter a number for the Engineer's ID");
-                return false;
+                return console.log('\x1b[31m', " You must enter a number for the Engineer's ID");
             }
         }
     },
@@ -101,12 +100,16 @@ const questionsEngineer = [
         name: "emailEngineer",
         message: "What is the Engineer's email address?",
         validate: emailInput => {
-            if (validator.validate(emailInput)) {
+            let emailChecker = teamArray.some(obj => obj.email === emailInput);
+
+            if (validator.validate(emailInput) && !emailChecker) {
                 return true;
             }
+            else if (emailChecker) {
+                return console.log('\x1b[31m', " You must enter a unique email for every employee!");
+            }
             else {
-                console.log('\x1b[31m', " You must enter a valid email address!");
-                return false;
+                return console.log('\x1b[31m', " You must enter a valid email address!");
             }
         }
     },
@@ -115,12 +118,16 @@ const questionsEngineer = [
         name: "githubEngineer",
         message: "What is the Engineer's GitHub username?",
         validate: githubInput => {
-            if (githubInput) {
+            let githubChecker = teamArray.some(obj => obj.github === githubInput);
+
+            if (githubInput && !githubChecker) {
                 return true;
             }
+            else if (githubChecker) {
+                return console.log('\x1b[31m', " You must enter a unique GitHub username for every engineer!");
+            }
             else {
-                console.log('\x1b[31m', " You must enter a GitHub username!");
-                return false;
+                return console.log('\x1b[31m', " You must enter a GitHub username!");
             }
         }
     }
@@ -136,8 +143,7 @@ const questionsIntern = [
                 return true;
             }
             else {
-                console.log('\x1b[31m', " You must enter a name!");
-                return false;
+                return console.log('\x1b[31m', " You must enter a name!");
             }
         }
     },
@@ -146,12 +152,16 @@ const questionsIntern = [
         name: "idIntern",
         message: "What is the Intern's employee ID?",
         validate: idInput => {
-            if (!isNaN(idInput)) {
+            let idChecker = teamArray.some(obj => obj.id === idInput);
+
+            if (!isNaN(idInput) && !idChecker) {
                 return true;
             }
+            else if (idChecker) {
+                return console.log('\x1b[31m', " You must enter a unique id for every employee!");
+            }
             else {
-                console.log('\x1b[31m', " You must enter a number for the Intern's ID");
-                return false;
+                return console.log('\x1b[31m', " You must enter a number for the Intern's ID");
             }
         }
     },
@@ -160,12 +170,16 @@ const questionsIntern = [
         name: "emailIntern",
         message: "What is the Intern's email address?",
         validate: emailInput => {
-            if (validator.validate(emailInput)) {
+            let emailChecker = teamArray.some(obj => obj.email === emailInput);
+
+            if (validator.validate(emailInput) && !emailChecker) {
                 return true;
             }
+            else if (emailChecker) {
+                return console.log('\x1b[31m', " You must enter a unique email for every employee!");
+            }
             else {
-                console.log('\x1b[31m', " You must enter a valid email address!");
-                return false;
+                return console.log('\x1b[31m', " You must enter a valid email address!");
             }
         }
     },
@@ -178,8 +192,7 @@ const questionsIntern = [
                 return true;
             }
             else {
-                console.log('\x1b[31m', " You must enter a school for the Intern!");
-                return false;
+                return console.log('\x1b[31m', " You must enter a school for the Intern!");
             }
         }
     }

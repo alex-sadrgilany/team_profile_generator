@@ -4,10 +4,12 @@ body {
 
 a {
     text-decoration: underline;
+    color: #0F1A20;
 }
 
 li {
     font-size: 18px;
+    color:#0F1A20;
 }
 
 .jumbotron {

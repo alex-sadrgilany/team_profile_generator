@@ -1,3 +1,4 @@
+// function that will generate the proper html output with the data the user entered for a manager
 const generateManager = dataManager => {
     return `
                 <div class="card">
@@ -15,6 +16,7 @@ const generateManager = dataManager => {
                 </div>`;
 };
 
+// function that will generate the proper html for a team engineer
 const generateEngineer = dataEngineer => {
     return `
                 <div class="card">
@@ -32,6 +34,7 @@ const generateEngineer = dataEngineer => {
                 </div>`;
 };
 
+// function that will generate the proper html for a team intern
 const generateIntern = dataIntern => {
     return `
                 <div class="card">
@@ -49,6 +52,7 @@ const generateIntern = dataIntern => {
                 </div>`;
 };
 
+// function to generate each card in the team's array and return the html all joined together
 const generateCards = (array) => {
     const html = [];
 
@@ -66,10 +70,10 @@ const generateCards = (array) => {
         .map(intern => generateIntern(intern))
         .join("")
     );
-
     return html.join("");
 };
 
+// final function to generate the complete webpage
 const generateWebPage = team => {
     return `
 <!DOCTYPE html>

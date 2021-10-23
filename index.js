@@ -1,3 +1,4 @@
+// require all necessities
 const inquirer = require("inquirer");
 const {writeFile} = require("./utils/generateHTML");
 const generateIndexHTML = require("./src/htmlTemplate");
@@ -6,8 +7,10 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const validator = require("email-validator");
 
+// create an empty array that we will be filling based on user input
 const teamArray = [];
 
+// questions that we'll be asking for the team's manager
 const questionsManager = [
     {
         type: "input",
@@ -63,6 +66,7 @@ const questionsManager = [
     }
 ];
 
+// questions that we'll be asking for each engineer a user wants to add
 const questionsEngineer = [
     {
         type: "input",
@@ -133,6 +137,7 @@ const questionsEngineer = [
     }
 ];
 
+// questions we'll be asking for each intern a user wants to add
 const questionsIntern = [
     {
         type: "input",
@@ -198,6 +203,7 @@ const questionsIntern = [
     }
 ];
 
+// menu question after they've added each member
 const questionsNewMember = [
     {
         type: "list",
@@ -211,6 +217,7 @@ const questionsNewMember = [
     }
 ];
 
+// function to prompt the user to enter a manager
 const promptUserManager = () => {
     inquirer.prompt(questionsManager)
     .then(answers => {
@@ -223,6 +230,7 @@ const promptUserManager = () => {
     });
 };
 
+// function to prompt the user to enter an engineer
 const promptUserEngineer = () => {
     inquirer.prompt(questionsEngineer)
     .then(answers => {
@@ -235,6 +243,7 @@ const promptUserEngineer = () => {
     });
 };
 
+// function to prompt the user to enter an intern
 const promptUserIntern = () => {
     inquirer.prompt(questionsIntern)
     .then(answers => {
@@ -247,6 +256,7 @@ const promptUserIntern = () => {
     });
 };
 
+// function to prompt the user to add another member or leave
 const addMember = () => {
     inquirer.prompt(questionsNewMember)
     .then(answers => {
@@ -264,6 +274,7 @@ const addMember = () => {
     })
 };
 
+// function to finish the application and generate the index.html based on prompt answers
 const finishHTML = () => {
     writeFile(generateIndexHTML(teamArray))
     .then(writeFileResponse => {
@@ -276,4 +287,5 @@ const finishHTML = () => {
     });
 };
 
+// run this on start to prompt the user to enter a manager
 promptUserManager();

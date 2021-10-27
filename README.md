@@ -12,6 +12,10 @@ Walkthrough Video:
 
 https://watch.screencastify.com/v/2Mx445BGKMCJEguT3H1m
 
+If the above link is broken I also uploaded it to youtube:
+
+https://www.youtube.com/watch?v=jG_ddao88Og
+
 During this video, I didn't show the additional validation that every employee must have a unique employee ID number. But in the screenshot below for validation, you can see if you try to give the same employee ID number to two employees the application will not allow you to do so.
 
 ## Table of Contents
